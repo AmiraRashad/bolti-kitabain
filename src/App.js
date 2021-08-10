@@ -2,7 +2,7 @@ import React from "react";
 import Gridpage from "./Grid";
 import Signin from "./Signin";
 import Signup from "./Signup";
-import {BrowserRouter as Route,Switch,Router} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 
 
@@ -14,13 +14,14 @@ function App() {
     <ToastContainer>
 
     </ToastContainer>
-    </div>
+    
     <Switch> 
-      <Route path="./Signin" component={Signin}/>
-      <Route path=".'Signup" component={Signup}/>
+      <Route path="Signin" ><Signin/></Route>
+      <Route path="Signup" component={Signup}/>
       
 
     </Switch>
+    </div>
      </Router>
 
     

@@ -1,9 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Button } from "@material-ui/core";
+import {Link} from "react-router-dom";
+import { Form, Nav, Navbar} from 'react-bootstrap';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import {Link} from "react-router-dom";
 import Popularbooks from "./PopularBooks";
 import "./index.js";
 import "./index.css";
@@ -104,20 +105,22 @@ export default function CenteredGrid() {
                 </Button>
                 
               </div>
-              <Button
+              <Link to = {"Signin"}>
+                <Button
                 style={{ fontWeight: 400 }}
                 className={classes.toolbar2}
                 color="inherit"
               >
                 Sign In
               </Button>
-             <Button
+              </Link>
+              <Link to = {"Signup"} > <Button
                 style={{ marginRight: 180 }}
                 className={classes.toolbar2}
                 color="inherit"
               > Sign Up
               </Button>
-              
+              </Link>
                
             </Toolbar>
           </AppBar>
