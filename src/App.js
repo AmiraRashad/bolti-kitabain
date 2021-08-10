@@ -9,19 +9,18 @@ import { ToastContainer } from 'react-toastify';
 function App() {
   return (
   <Router>
-    <div>
-      <Gridpage />
-    <ToastContainer>
-
-    </ToastContainer>
+    
+    
     
     <Switch> 
-      <Route path="Signin" ><Signin/></Route>
-      <Route path="Signup" component={Signup}/>
+      <Route path="/signin" component={Signin}/>
+      <Route path="/signup" component={Signup}/>
+      <Route path="/" component={Gridpage}/>
+
       
 
     </Switch>
-    </div>
+    
      </Router>
 
     

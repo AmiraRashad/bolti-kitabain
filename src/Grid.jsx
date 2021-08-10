@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Button } from "@material-ui/core";
-import {Link} from "react-router-dom";
+import {Link,Route, Switch} from "react-router-dom";
 import { Form, Nav, Navbar} from 'react-bootstrap';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -105,7 +105,8 @@ export default function CenteredGrid() {
                 </Button>
                 
               </div>
-              <Link to = {"Signin"}>
+              
+              <Link to = "/signin">
                 <Button
                 style={{ fontWeight: 400 }}
                 className={classes.toolbar2}
@@ -114,7 +115,7 @@ export default function CenteredGrid() {
                 Sign In
               </Button>
               </Link>
-              <Link to = {"Signup"} > <Button
+              <Link to = "/signup" > <Button
                 style={{ marginRight: 180 }}
                 className={classes.toolbar2}
                 color="inherit"
