@@ -1,17 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Button } from "@material-ui/core";
-import {Link,Route, Switch} from "react-router-dom";
-import { Form, Nav, Navbar} from 'react-bootstrap';
+import { Link, Route, Switch } from "react-router-dom";
+import { Form, Nav, Navbar } from "react-bootstrap";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Popularbooks from "./PopularBooks";
 import "./index.js";
 import "./index.css";
 import { auto } from "@popperjs/core";
-
-
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
   },
   appbar: {
     backgroundColor: "transparent",
-   
   },
   maintoolbar: {
     marginLeft: 45,
@@ -60,76 +56,31 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: "#85D7ED",
       color: "white",
-      
     },
   },
 }));
-
 
 export default function CenteredGrid() {
   const classes = useStyles();
 
   return (
-    
     <div
       style={{
-        
         backgroundImage: `url("images/landingpage.jpg")`,
-        flex:1,
-        backgroundSize: '100% auto',
+        flex: 1,
+        backgroundSize: "100% auto",
         resizeMode: "contain",
         backgroundAttachment: "cover",
         backgroundRepeat: "no-repeat",
-        justifyContent: 'center',
-        alignItems: 'center',
-        
-
+        justifyContent: "center",
+        alignItems: "center",
       }}
       className={classes.root}
     >
       <Grid container>
-        <Grid item xs={6} md={6}>
-          <AppBar elevation={0} className={classes.appbar}>
-          
-            <Toolbar className={classes.maintoolbar}>
-             
-              <Button className={classes.toolbar} color="inherit">
-                Library
-              </Button>
-              <Button className={classes.toolbar} color="inherit">
-                My Books
-              </Button>
-              <div style={{ flexGrow: 1 }}>
-                <Button className={classes.toolbar} color="inherit">
-                Contact Us
-                </Button>
-                
-              </div>
-              
-              <Link to = "/signin">
-                <Button
-                style={{ fontWeight: 400 }}
-                className={classes.toolbar2}
-                color="inherit"
-              >
-                Sign In
-              </Button>
-              </Link>
-              <Link to = "/signup" > <Button
-                style={{ marginRight: 180 }}
-                className={classes.toolbar2}
-                color="inherit"
-              > Sign Up
-              </Button>
-              </Link>
-               
-            </Toolbar>
-          </AppBar>
-        </Grid>
         <Grid className={classes.text1} item xs={12} md={6}>
           <Typography variant="h2" className={classes.fontname}>
-  
-          بولتی کتابیں<br></br>
+            بولتی کتابیں<br></br>
           </Typography>
           <Typography
             style={{ marginTop: 22, fontSize: 22 }}
