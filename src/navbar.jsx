@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Button } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import { Link } from "react-router-dom";
 import "./index.js";
 import "./index.css";
 
@@ -76,21 +77,25 @@ const NavBar = () => {
                   Contact Us
                 </Button>
               </div>
-              <Button
-                style={{ fontWeight: 400 }}
-                className={classes.toolbar2}
-                color="inherit"
-              >
-                Sign In
-              </Button>
-              <Button
-                style={{ marginRight: 180 }}
-                className={classes.toolbar2}
-                color="inherit"
-              >
-                {" "}
-                Sign Up
-              </Button>
+              <Link to="/signin">
+                <Button
+                  style={{ fontWeight: 400 }}
+                  className={classes.toolbar2}
+                  color="inherit"
+                >
+                  Sign In
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button
+                  style={{ marginRight: 180 }}
+                  className={classes.toolbar2}
+                  color="inherit"
+                >
+                  {" "}
+                  Sign Up
+                </Button>
+              </Link>
             </Toolbar>
           </AppBar>
         </Grid>
@@ -98,3 +103,4 @@ const NavBar = () => {
     </div>
   );
 };
+export default NavBar;
