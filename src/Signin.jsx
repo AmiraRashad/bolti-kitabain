@@ -24,6 +24,17 @@ const Signin = () => {
     const [email] = React.useState("");
     const [password] = React.useState("");
     return( 
+        <div
+      style={{
+        backgroundImage: `url("images/bk.jpg")`,
+        flex: 1,
+        backgroundSize: "65% 100%",
+        resizeMode: "contain",
+        backgroundRepeat: "no-repeat",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+      >
         <Grid
         container
         display= "flex"
@@ -32,7 +43,7 @@ const Signin = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid className={classes.text1} item xs={15} md={13} >
+        <Grid className={classes.text1} item xs={4} md={3} >
         <div className={classes.child}>
         <FaRegUserCircle size="5rem" style={{marginLeft:"40%"}}/>
         <h1 >Login</h1>
@@ -45,13 +56,11 @@ const Signin = () => {
         <a href="/Signup" style={{color:"purple",marginLeft:"10px", marginTop:"90px"}}>Don't have an account? Sign Up</a>
         <Button variant="contained" color="primary" style ={{ width: "100%", marginTop:"30px",}}
         >Login </Button>
-        
+
         </div>
         </Grid>
         </Grid>
-  
+         </div>
         );
-        
-
-}
+        }
 export default Signin;
