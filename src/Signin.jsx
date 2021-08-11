@@ -1,42 +1,55 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, TextField } from '@material-ui/core';
+import { Grid, Button, TextField } from '@material-ui/core';
 import {FaRegUserCircle} from "react-icons/fa";
 
 const useStyles = makeStyles((theme)=>({
-    container:{
-        display:"flex",
-        justifyContent:"center",
-        alignItems:"center",
-        height :"600px",
-    },
+   
     child:{
-        width:"60%",
+        width:"100%",
+        marginLeft: "100%",
     },
     button:{
-        marginTop:"50px"
-    }
+        marginTop:"50px",
+        
+    },
+    text1: {
+        marginTop: "5%",
+        marginLeft: "10%",
+      },
+     
 }));     
 const Signin = () => {
     const classes = useStyles(); 
     const [email] = React.useState("");
     const [password] = React.useState("");
-    return( <div className={classes.container}>
+    return( 
+        <Grid
+        container
+        display= "flex"
+        direction="row"
+        height = "100%"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid className={classes.text1} item xs={15} md={13} >
         <div className={classes.child}>
-        <FaRegUserCircle size="5rem" style={{marginLeft:"360px"}}/>
-        <h1 className="text-center">Login</h1>
+        <FaRegUserCircle size="5rem" style={{marginLeft:"40%"}}/>
+        <h1 >Login</h1>
         <TextField style={{}} label="Email" fullWidth value={email} onChange={(e)=>{
             
-        }}/><br/>
+        }}/><br/><br></br>
         <TextField style={{}} label="Password" type="password" fullWidth value={password} onChange={(e)=>{
          
-        }}/><br/>
-        <a href="/Signup" style={{color:"purple",marginLeft:"300px"}}>Don't have an account? Sign Up</a>
-        <Button variant="contained" color="primary" style ={{marginLeft:"360px",marginBottom:"30px"}}
+        }}/><br/> <br></br>
+        <a href="/Signup" style={{color:"purple",marginLeft:"10px", marginTop:"90px"}}>Don't have an account? Sign Up</a>
+        <Button variant="contained" color="primary" style ={{ width: "100%", marginTop:"30px",}}
         >Login </Button>
         
         </div>
-        </div>
+        </Grid>
+        </Grid>
+  
         );
         
 
