@@ -1,30 +1,66 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, TextField } from '@material-ui/core';
-import {FaRegUser} from "react-icons/fa"
+import { Grid, Button, TextField } from '@material-ui/core';
+import Datepicker from "react-datepicker";
+import {Dropdown,DropdownButton} from 'react-dropdown';
+import {FaRegUserCircle} from "react-icons/fa";
+
 const useStyles = makeStyles((theme)=>({
-    container:{
-        display:"flex",
-        justifyContent:"center",
-        alignItems:"center",
-        height :"600px",
-    },
+   
     child:{
-        width:"60%",
+        width:"100%",
+        marginLeft: "100%",
     },
     button:{
-        marginTop:"50px"
-    }
-}));              
+        marginTop:"50px",
+        
+    },
+    text1: {
+        marginTop: "5%",
+        marginLeft: "10%",
+      },
+     
+}));             
 const Signup = () => {
     const classes = useStyles();
     const [email] = React.useState("");
     const [password] = React.useState("");
+    const [confirmpassword] = React.useState("");
     const [name] = React.useState("");
-    return ( <div className={classes.container}>
+    // const [dateofbirth] = React.useState("");
+    // const [occupation] = React.useState("");
+    // const [disabilty] = React.useState("");
+    // const handleChange = ( value, name,date) => {
+    //     console.log(value);
+    //     var change = {};
+    //     change[name] = date;
+    //      this.setState(change);
+    // };
+    return ( 
+        <div
+        style={{
+          backgroundImage: `url("images/su.jpg")`,
+          flex: 1,
+          backgroundSize: "65% 100%",
+          resizeMode: "contain",
+          backgroundRepeat: "no-repeat",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+        >
+
+        <Grid
+        container
+        display= "flex"
+        direction="row"
+        height = "100%"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid className={classes.text1} item xs={4} md={3} >
         <div className={classes.child}>
-        <FaRegUser size="5rem" style={{marginLeft:"350px"}}/>
-        <h1 className="text-center">Register</h1>
+        <FaRegUserCircle size="5rem" style={{marginLeft:"40%"}}/>
+        <h1>Register</h1>
         <TextField style={{}} label="name" fullWidth value={name} onChange={e=>{
             
         }}/><br/>
@@ -34,12 +70,23 @@ const Signup = () => {
         <TextField style={{}} label="password" type="password"fullWidth value={password} onChange={e=>{
            
         }}/><br/>
+        <TextField style={{}} label="confirm password" type="password"fullWidth value={password} onChange={e=>{
+           
+        }}/><br/>
+           <TextField style={{}} label="password" type="password"fullWidth value={confirmpassword} onChange={e=>{
+           
+        }}/><br/>
+       
+      
         <Button variant="contained" color="primary" style={{marginTop:"50px"}}className={classes.button} onClick={e=>{
         }}>Register</Button>
         <a href="/Signin" style={{marginLeft:"180px",color:"purple"}}>Already have an account ? Sign In</a>
-        </div>
+       </div>
         
-    </div> );
-}
+        </Grid>
+        </Grid>
+        </div>
+    );
+    }
  
 export default Signup;

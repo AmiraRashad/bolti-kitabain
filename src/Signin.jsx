@@ -26,7 +26,7 @@ const Signin = () => {
     return( 
         <div
       style={{
-        backgroundImage: `url("images/bk.jpg")`,
+        backgroundImage: `url("images/si.jpg")`,
         flex: 1,
         backgroundSize: "65% 100%",
         resizeMode: "contain",
