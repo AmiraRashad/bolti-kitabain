@@ -1,20 +1,11 @@
-import { Howl, Howler } from 'howler';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
 
-class App extends Component {
-    SoundPlay() {
-      const Sounds = new Howl({
-        src: ["sound.mp3"]
-      })
-      Sounds.play()
-      console.log("sound")
-    }
-    render() {
-      return (
-        <div className="App">
-          <button onClick={this.SoundPlay}>play</button>
-        </div>
-      );
-    }
-  }
-  
-  export default App;
+const useStyles = makeStyles((theme) => ({}));
+const AudioPlayer = () => {
+  const classes = useStyles();
+  return;
+};
+
+export default AudioPlayer;

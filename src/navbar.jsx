@@ -66,9 +66,11 @@ const NavBar = () => {
         <Grid item xs={6} md={6}>
           <AppBar elevation={0} className={classes.appbar}>
             <Toolbar className={classes.maintoolbar}>
-              <Button className={classes.toolbar} color="inherit">
-                Library
-              </Button>
+              <Link to="/audioplayer">
+                <Button className={classes.toolbar} color="inherit">
+                  Library
+                </Button>
+              </Link>
               <Button className={classes.toolbar} color="inherit">
                 My Books
               </Button>
