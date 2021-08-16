@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Button, TextField } from '@material-ui/core';
+import userService from './services/UserService';
 import Datepicker from "react-datepicker";
 import {Dropdown,DropdownButton} from 'react-dropdown';
 import {FaRegUserCircle} from "react-icons/fa";
@@ -21,13 +22,13 @@ const useStyles = makeStyles((theme)=>({
       },
      
 }));             
-const Signup = () => {
+const Signup = (props) => {
     const classes = useStyles();
-    const [email] = React.useState("");
-    const [password] = React.useState("");
-    const [confirmpassword] = React.useState("");
-    const [name] = React.useState("");
-    // const [dateofbirth] = React.useState("");
+    const [email,SetEmail] = React.useState("");
+    const [password,SetPassword] = React.useState("");
+    const [confirmpassword, comPassword] = React.useState("");
+    const [name, SetName] = React.useState("");
+     const [dateofbirth, SetDOB] = React.useState("");
     // const [occupation] = React.useState("");
     // const [disabilty] = React.useState("");
     // const handleChange = ( value, name,date) => {
@@ -63,18 +64,21 @@ const Signup = () => {
         <h1>Register</h1>
         <TextField style={{}} label="name" fullWidth value={name} onChange={e=>{
             
+            SetName(e.target.value);
         }}/><br/>
         <TextField style={{}} label="email"fullWidth value ={email} onChange={e=>{
+          SetEmail(e.target.value);
             
         }}/><br/>
         <TextField style={{}} label="password" type="password"fullWidth value={password} onChange={e=>{
-           
+            SetPassword(e.target.value);
         }}/><br/>
-        <TextField style={{}} label="confirm password" type="password"fullWidth value={password} onChange={e=>{
-           
+        <TextField style={{}} label="confirm password" type="password"fullWidth value={confirmpassword} onChange={e=>{
+           comPassword(e.target.value);
         }}/><br/>
-           <TextField style={{}} label="password" type="password"fullWidth value={confirmpassword} onChange={e=>{
-           
+        <br/>
+           <TextField style={{}} type="date"fullWidth value={dateofbirth} onChange={e=>{
+           SetDOB(e.target.value);
         }}/><br/>
        
       
