@@ -29,8 +29,8 @@ const Signup = (props) => {
     const [confirmpassword, comPassword] = React.useState("");
     const [name, SetName] = React.useState("");
      const [dateofbirth, SetDOB] = React.useState("");
-    // const [occupation] = React.useState("");
-    // const [disabilty] = React.useState("");
+    //  const [occupation] = React.useState("");
+    //  const [disabilty] = React.useState("");
     // const handleChange = ( value, name,date) => {
     //     console.log(value);
     //     var change = {};
@@ -80,6 +80,9 @@ const Signup = (props) => {
            <TextField style={{}} type="date"fullWidth value={dateofbirth} onChange={e=>{
            SetDOB(e.target.value);
         }}/><br/>
+        {/* <TextField style={{}} label="Occupation" type="dropdown"fullWidth value={dateofbirth} onChange={e=>{ */}
+           {/* occupation(e.target.value); */}
+        {/* }}/><br/> */}
        
       
         <Button variant="contained" color="primary" style={{marginTop:"50px"}}className={classes.button} onClick={e=>{
