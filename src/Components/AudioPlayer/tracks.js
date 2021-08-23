@@ -6,7 +6,7 @@ import fifty from "../../assets/mp3/music.mp3";
 export default [
   {
     title: "Cali",
-    artist: "Wataboi",
+    artist: "Wataboy",
     audioSrc: fifty,
     image: imgSrc,
     color: "#00aeb0",
