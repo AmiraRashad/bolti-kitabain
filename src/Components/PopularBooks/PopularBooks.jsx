@@ -8,7 +8,7 @@ import "swiper/swiper.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/components/navigation/navigation.min.css";
-import "../../styles.css";
+import "./styles.css";
 import { useStyles } from "./styles";
 
 import SwiperCore, {
