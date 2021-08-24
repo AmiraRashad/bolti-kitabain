@@ -1,15 +1,15 @@
-import React from "react";
+import* as React from 'react';
 import { withRouter } from "react-router-dom";
 import userService from "../../services/UserService";
-import { useStyles } from "./styles";
 
-const Admin = (props) => {
+const Admin = (props:any) => {
   React.useEffect(() => {
     if (!userService.isAdmin()) {
       props.history.push("/login");
     }
   }, []);
-  return <>{props.children}</>;
+  return {props}; // children removed
+  
 };
 
 export default withRouter(Admin);
