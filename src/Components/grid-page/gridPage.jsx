@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Typography, Button } from '@material-ui/core';
-import Popularbooks from '../PopularBooks/PopularBooks';
+import Popularbooks from '../popular-books/popularBooks';
 import '../../index.css';
 import useStyles from './styles';
 
