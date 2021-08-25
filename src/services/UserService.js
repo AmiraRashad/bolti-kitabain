@@ -1,4 +1,4 @@
-import Generic from "./Generic";
+import Generic from "./generic";
 import jwt_decode from "jwt-decode";
 class UserService extends Generic
 {
