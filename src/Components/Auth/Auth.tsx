@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import { useStyles } from "./styles";
 
 import userService from "../../services/UserService";
-const Auth = (props:any) => {
+const Auth = (props: any) => {
   React.useEffect(() => {
     if (!userService.isLoggedin()) {
       props.history.push("/login");
@@ -12,4 +12,4 @@ const Auth = (props:any) => {
   return {props}; // children removed
 };
 
-export default withRouter(Auth);
+// export default withRouter(Auth);

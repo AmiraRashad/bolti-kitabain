@@ -9,7 +9,8 @@ const ContactUs = () => {
         <div className="container">
           <form className="col-lg-6 offset-lg-3">
             <div className="form-group">
-              <label for="email">Email</label>
+              <label htmlFor ="email">Email</label>  
+              {/* added htmlFor instead of For */}
               <input
                 type="email"
                 id="email"
@@ -19,7 +20,7 @@ const ContactUs = () => {
               ></input>
             </div>
             <div className="form-group">
-              <label for="name">Name</label>
+              <label htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
@@ -28,12 +29,12 @@ const ContactUs = () => {
               ></input>
             </div>
             <div className="form-group">
-              <label for="message">Message</label>
+              <label htmlFor="message">Message</label>
               <textarea
                 className="form-control"
                 id="message"
                 placeholder="Message"
-                row="5"
+                // row="5"
               ></textarea>
             </div>
             <div className="text-center">

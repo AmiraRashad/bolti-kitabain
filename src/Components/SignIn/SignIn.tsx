@@ -19,14 +19,14 @@ const SignIn = () => {
 				alignItems: 'center',
 			}}
 		>
-			<Grid
-				container
+			{/* <Grid container
 				display="flex"
 				direction="row"
 				height="100%"
 				justifyContent="center"
 				alignItems="center"
-			>
+				> */}
+			
 				<Grid className={classes.text1} item xs={4} md={3}>
 					<div className={classes.child}>
 						<FaRegUserCircle size="5rem" style={{ marginLeft: '40%' }} />
@@ -64,7 +64,7 @@ const SignIn = () => {
 						</Button>
 					</div>
 				</Grid>
-			</Grid>
+			{/* </Grid> */}
 		</div>
 	);
 };

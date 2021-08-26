@@ -12,4 +12,4 @@ const Admin = (props:any) => {
   
 };
 
-export default withRouter(Admin);
+// export default withRouter(Admin);

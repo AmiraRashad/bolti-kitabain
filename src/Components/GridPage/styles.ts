@@ -41,6 +41,11 @@ const useStyles = makeStyles((theme) => ({
 			color: '#33a1b2',
 		},
 	},
+	powered:
+	{
+		color: 'black',
+	},
+
 	toolbar2: {
 		color: 'black',
 		'&:hover': {
