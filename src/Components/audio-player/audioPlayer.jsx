@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import AudioControls from './AudioControls';
-import Backdrop from './BackDrop';
+import AudioControls from './audioControls';
+import Backdrop from './backDrop';
 import './styles.css';
 
 /*

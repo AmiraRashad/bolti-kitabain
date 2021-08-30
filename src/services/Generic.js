@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 axios.defaults.baseURL = 'http://localhost:3001';
-//axios.defaults.baseURL="https://layers-app-api.herokuapp.com/api";
+// axios.defaults.baseURL="https://layers-app-api.herokuapp.com/api";
 
 axios.defaults.headers.common['x-auth-token'] = localStorage.getItem('token');
 class Generic {
-	constructor() {}
+	// constructor() {}
+
 	get = (url) =>
 		new Promise((resolve, reject) => {
 			axios
@@ -17,6 +18,7 @@ class Generic {
 					reject(err);
 				});
 		});
+
 	post = (url, data) =>
 		new Promise((resolve, reject) => {
 			axios
@@ -28,6 +30,7 @@ class Generic {
 					reject(err);
 				});
 		});
+
 	delete = (url) =>
 		new Promise((resolve, reject) => {
 			axios
@@ -39,6 +42,7 @@ class Generic {
 					reject(err);
 				});
 		});
+
 	put = (url, data) =>
 		new Promise((resolve, reject) => {
 			axios

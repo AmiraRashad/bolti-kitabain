@@ -1,42 +1,45 @@
-import Generic from "./Generic";
-import jwt_decode from "jwt-decode";
-class UserService extends Generic
-{
-    constructor(){ super();}
+import jwtDecode from 'jwt-decode';
+import Generic from './Generic';
 
-    login =(email,password)=> new Promise((resolve,reject)=>{
-        this.post("users/login",{email,password}).then(token=>{
-            localStorage.setItem("token",token);
-            resolve(token);
-            }).catch(err=>{
-                reject(err);
-        })
-    }); 
-    register =(name,email,password)=>this.post("users/register",{password,email,name});
-    logout = ()=> {
-        localStorage.removeItem("token");
-    }
-    isLoggedin = ()=>{
-        return localStorage.getItem("token")?true : false;
-    }
+class UserService extends Generic {
+	login = (email, password) =>
+		new Promise((resolve, reject) => {
+			this.post('users/login', { email, password })
+				.then((token) => {
+					localStorage.setItem('token', token);
+					resolve(token);
+				})
+				.catch((err) => {
+					reject(err);
+				});
+		});
 
-    getLoggedinUser = ()=>{
-        try{
-            const jwt = localStorage.getItem("token");
-            return jwt_decode(jwt);
-        }catch(ex){
-            return null
-        }
-    };
+	register = (name, email, password) =>
+		this.post('users/register', { password, email, name });
 
-    isAdmin = ()=>{
-        if(this.isLoggedin())
-        {
-            if(this.getLoggedinUser().role=="admin") return true;
-            else return false;
-        } else return false;
-    }
+	logout = () => {
+		localStorage.removeItem('token');
+	};
+
+	isLoggedin = () => !!localStorage.getItem('token');
+
+	getLoggedinUser = () => {
+		try {
+			const jwt = localStorage.getItem('token');
+			return jwtDecode(jwt);
+		} catch (ex) {
+			return null;
+		}
+	};
+
+	isAdmin = () => {
+		if (this.isLoggedin()) {
+			if (this.getLoggedinUser().role === 'admin') return true;
+			return false;
+		}
+		return false;
+	};
 }
 
-let userService = new UserService();
+const userService = new UserService();
 export default userService;
